@@ -1,3 +1,9 @@
+// A bouncy number is one whose digits are neither entirely increasing nor decreasing.
+// If a number is less than 100, it is not bouncy.
+// Extract digits and check: if they increase at least once (a = 1) and decrease at least once (b = 1), it is bouncy.
+// If digits only increase or only decrease, it is not bouncy.
+// Example: 134468 (Not Bouncy), 987654 (Not Bouncy), 155349 (Bouncy). 
+
 import java.util.*;
 public class BouncyNo {
     public static void main(String[] args){
