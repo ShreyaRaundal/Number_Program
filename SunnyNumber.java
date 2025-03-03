@@ -3,23 +3,21 @@
 // 10 → 10 + 1 = 11 (not a perfect square) → ❌ Not a Sunny Number
 
 import java.util.Scanner;
+
 public class SunnyNumber {
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        int n,i,c=0,a;
-        System.out.println("Enter the number: ");
-        n=sc.nextInt();
-        for(i=0;i<=n;i++){
-            a=(i*i)-1;
-            if(a==c){
-                c=1;
-            }
-        }
-        if(c==1){
-            System.out.println("the number is Sunny number "+n);
-        }else{
-            System.out.println("the number is not a sunny number "+n);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int n = sc.nextInt();
+
+        // Check if (n + 1) is a perfect square
+        int num = n + 1;
+        int sqrt = (int) Math.sqrt(num);
+
+        if (sqrt * sqrt == num) {
+            System.out.println(n + " is a Sunny Number.");
+        } else {
+            System.out.println(n + " is NOT a Sunny Number.");
         }
     }
-    
 }
